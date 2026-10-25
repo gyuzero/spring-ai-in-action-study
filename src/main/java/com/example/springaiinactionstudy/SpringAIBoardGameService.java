@@ -1,9 +1,11 @@
 package com.example.springaiinactionstudy;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
+@Qualifier("springAIBoardGameService")
 public class SpringAIBoardGameService implements BoardGameService {
 
     private final ChatClient chatClient;
